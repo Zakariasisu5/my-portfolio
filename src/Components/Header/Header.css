@@ -1,0 +1,96 @@
+header{
+    height: 100vh;
+    padding-top: 4rem;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 2rem;
+    margin: 2rem;
+}
+
+.header__container{
+    text-align: center;
+    height: 100%;
+    position: relative;
+    
+}
+
+.CTA{
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.header__socials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+    margin-left: 5rem;
+}
+
+header__socials::after{
+    content: '';
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+
+}
+
+.profile img{
+    background-color: linear-gradient
+    (var(--color-primary) transparent);
+    width: 15rem;
+    height: 20rem;
+    position: absolute;
+    margin-left: 3rem ;
+    /*left: 50%;
+    transform: translateX(-50%);*/
+    left: calc(50% - 11rem);
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    border-radius: 12rem 12rem 0 0;
+    border: 10px solid rgb(139, 216, 240);
+    
+
+}
+.Scroll-down{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    right: 0;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-size: 300;
+    font-size: 0.9rem;
+    margin-right: 5rem;
+
+
+}
+
+/* Media Queries (Medium devices */
+
+@media screen and (max-width: 1024){
+    .header{
+       height: 68vh;
+
+    }
+    
+}
+
+/* Media Queries (small devices */
+@media screen and (max-width: 600){
+    .header{
+        height: 100vh;
+
+    }
+    .header__socials , .Scroll-down{
+        display: none;
+    }
+}
