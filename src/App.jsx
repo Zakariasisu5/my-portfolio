@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import useSectionAnimation from "./useSectionAnimation"; // adjust path as needed
 
 import Portfolio from './Components/Portfolio/Portfolio.jsx'
 import Header from './Components/Header/Header.jsx'
@@ -13,6 +14,7 @@ import Service from './Components/Service/Service.jsx'
 
 
 const  App = () =>{
+  useSectionAnimation();
 
   return (
     <>

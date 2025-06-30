@@ -132,4 +132,26 @@ img{
     }
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  margin-bottom: 7rem;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+
+section.visible {
+  animation: fadeInUp 0.8s forwards;
+}
+
 

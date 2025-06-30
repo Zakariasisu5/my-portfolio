@@ -1,29 +1,26 @@
-import { StrictMode, useEffect } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import { useEffect } from "react";
 
-function useSectionAnimation() {
+const useSectionAnimation = () => {
   useEffect(() => {
-    const sections = document.querySelectorAll("section");
+    // Select all sections except the nav section
+    const sections = document.querySelectorAll("section:not(.nav-section)");
+
     const revealSection = () => {
       sections.forEach((section, idx) => {
         const rect = section.getBoundingClientRect();
         if (rect.top < window.innerHeight - 100) {
+          // Only add delay for non-nav sections
           setTimeout(() => {
             section.classList.add("visible");
-          }, idx * 300); // stagger animation
+          }, idx * 200);
         }
       });
     };
+
     window.addEventListener("scroll", revealSection);
     revealSection();
     return () => window.removeEventListener("scroll", revealSection);
   }, []);
-}
+};
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+export default useSectionAnimation;

@@ -1,6 +1,6 @@
 {
   "name": "my-portfolio",
-  "homepage": "http://Zakariasisu5.github.io/my-portfolio",
+  "homepage": "https://zakariasisu5.github.io/my-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "npm run deploy"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "emailjs-com": "^3.2.0",

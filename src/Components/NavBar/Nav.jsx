@@ -17,7 +17,7 @@ const Nav = () => {
   }
   
   return (
-    <section id='nav'>
+    <div className="nav-section">
 
     <nav>
        <a href='#' onClick={()=>setActive('#')} className={active === '#' ? "active" : ""} >
@@ -31,7 +31,7 @@ const Nav = () => {
          <a href='#contact' onClick={()=>setActive('#contact')} className={active === '#contact' ? "active" : ""}>
           <GrContact /></a>
     </nav>
-    </section>
+    </div>
   )
 }
 
