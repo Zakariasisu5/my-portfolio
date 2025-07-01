@@ -1,7 +1,8 @@
 .service__container{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;  
+ 
+  justify-content: space-between;
+  gap: 3rem;
 }
 
 .service{
@@ -9,6 +10,9 @@
     border-radius: 0 0 2rem 2rem;
     height: fit-content;
     transition: var(--transition);
+    border: 1px solid var(--color-bg-variant);
+    width:100%
+
 }
 
 .service:hover{
@@ -47,28 +51,43 @@
 }
 
 .service__list p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
-/* Media Queries (Medium devices */
-
-@media screen and (max-width: 1024){
-    .service__container{
-       grid-template-columns: 1fr 1fr;
-       gap: 2rem;
-      
+/* Media Queries (Medium devices: tablets, 600px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .service__container {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
     }
-    .service{
+    .service {
         height: auto;
     }
+    .service__list {
+        padding: 1.2rem;
+    }
 }
 
-/* Media Queries (small devices */
-@media screen and (max-width: 600){
-    .service__container{
-       grid-template-columns: 1fr 1fr;
-       gap: 1.5rem;
-      
+/* Media Queries (Small devices: phones, <600px) */
+@media screen and (max-width: 600px) {
+    .service__container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
-    
+    .service__list {
+        padding: 1rem;
     }
+    .service__head {
+        padding: 1.2rem;
+    }
+    .service__head h3 {
+        font-size: 0.95rem;
+    }
+    .service__list li {
+        gap: 0.7rem;
+        margin: 0.5rem 0;
+    }
+    .service {
+        border-radius: 1rem;
+    }
+}

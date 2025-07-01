@@ -39,21 +39,38 @@
     text-align: center;
 }
 
-/* Media Queries (Medium devices */
-
-@media screen and (max-width: 1024){
-    .testmonial__container{
-        width: 40%;
-       gap: 1rem;
+/* Media Queries (Medium devices: tablets, 600px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .testimonial__container {
+        width: 80%;
+        gap: 1.2rem;
     }
-    
+    .testimonial {
+        padding: 3rem 1.5rem 2.5rem 1.5rem;
+    }
+    .client__review {
+        width: 90%;
+    }
 }
 
-/* Media Queries (small devices */
-@media screen and (max-width: 600){
-    .testmonial__container{
-       width: 35%;
-       gap: 1rem;
-    
+/* Media Queries (Small devices: phones, <600px) */
+@media screen and (max-width: 600px) {
+    .testimonial__container {
+        width: 98%;
+        gap: 0.7rem;
+    }
+    .testimonial {
+        padding: 1.2rem 0.5rem 1.8rem 0.5rem;
+        border-radius: 1rem;
+    }
+    .client__avator {
+        width: 3rem;
+    }
+    .client__review {
+        width: 100%;
+        font-size: 0.95rem;
+    }
+    .testi h5, h2 {
+        font-size: 1rem;
     }
 }

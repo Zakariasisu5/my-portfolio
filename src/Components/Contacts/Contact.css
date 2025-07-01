@@ -52,19 +52,37 @@ input, textarea{
 }
 
 
-/* Media Queries (Medium devices */
-
-@media screen and (max-width: 1024){
-    .container.contact__container{
-        grid-template-columns: 1fr 1fr;
+/* Media Queries (Medium devices: tablets, 600px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .container.contact__container {
+        width: 90%;
+        grid-template-columns: 1fr;
         gap: 2rem;
-
+    }
+    .contact__options {
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
     }
 }
 
-/* Media Queries (small devices */
-@media screen and (max-width: 600){
-    .container.contact__container{
-        width: var(--container-width-sm);
+/* Media Queries (Small devices: phones, <600px) */
+@media screen and (max-width: 600px) {
+    .container.contact__container {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0 0.5rem;
     }
+    .contact__options {
+        flex-direction: column;
+        gap: 1rem;
     }
+    form {
+        gap: 0.8rem;
+    }
+    input, textarea {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+}
