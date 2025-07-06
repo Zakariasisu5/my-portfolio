@@ -39,32 +39,48 @@
    color: var(--color-primary);
 }
 
-/* Media Queries (Medium devices */
-
-@media screen and (max-width: 1024){
-    .experience_container{
-       grid-template-columns: 1fr;
-      
+/* Media Queries (Medium devices: tablets, 600px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .experience__container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        width: 90%;
+        max-width: 700px;
+        margin: 0 auto;
     }
     .experience__container > div {
-        padding: 2rem;
-        width: 80%;
+        padding: 2rem 1.5rem;
+        width: 100%;
         margin: 0 auto;
-    } 
-    .experience__content{
-        padding: 3rem;
+    }
+    .experience__content {
+        grid-template-columns: 1fr 1fr;
+        padding: 2rem 0.5rem;
+        row-gap: 1.5rem;
     }
 }
 
-/* Media Queries (small devices */
-@media screen and (max-width: 600){
-    .experience__container{
-       gap: 1rem;
+/* Media Queries (Small devices: phones, <600px) */
+@media screen and (max-width: 600px) {
+    .experience__container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        width: 98%;
+        max-width: 420px;
+        margin: 0 auto;
     }
     .experience__container > div {
         width: 100%;
-        padding: 2rem;
         margin: 0 auto;
     }
-    
+    .experience__content {
+        grid-template-columns: 1fr;
+        padding: 1rem 0;
+        row-gap: 1rem;
     }
+    .experience__details {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+}

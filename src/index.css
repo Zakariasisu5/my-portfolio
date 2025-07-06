@@ -110,12 +110,21 @@ img{
 /* Media Queries (Medium devices: tablets, 600px - 1024px) */
 @media screen and (max-width: 1024px) {
     .container {
-        width: 90%;
+        width: 95%;
         padding: 0 1rem;
     }
     section {
-        margin-top: 4rem;
-        margin-bottom: 3rem;
+        margin-top: 3rem;
+        margin-bottom: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    section > * {
+        width: 100%;
+        max-width: 700px;
     }
     h1 {
         font-size: 2rem;
@@ -123,30 +132,50 @@ img{
     h2 {
         font-size: 1.5rem;
     }
+    .btn {
+        padding: 0.7rem 1.1rem;
+        font-size: 1rem;
+    }
+    img {
+        border-radius: 0.7rem;
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 /* Media Queries (Small devices: phones, <600px) */
 @media screen and (max-width: 600px) {
     .container {
-        width: 98%;
-        padding: 0 0.5rem;
+        width: 100%;
+        padding: 0 0.3rem;
     }
     section {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        margin-top: 1.2rem;
+        margin-bottom: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    section > * {
+        width: 100%;
+        max-width: 420px;
     }
     h1 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     h2 {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     .btn {
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem;
+        padding: 0.5rem 0.8rem;
+        font-size: 0.95rem;
     }
     img {
         border-radius: 0.5rem;
+        max-width: 100%;
+        height: auto;
     }
 }
 

@@ -86,20 +86,38 @@ header__socials::after{
     .profile img {
         width: 12rem;
         height: 16rem;
-        left: calc(50% - 7rem);
+        left: 50%;
+        transform: translateX(-50%);
         margin-left: 0;
         margin-top: 2rem;
         border-width: 8px;
+        position: relative;
     }
     .header__socials {
         left: 0;
         margin-left: 2rem;
-        bottom: 2rem;
+        bottom: 3rem;
     }
     .Scroll-down {
         right: 0;
         margin-right: 2rem;
         bottom: 3rem;
+    }
+    .CTA {
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 1.5rem;
+    }
+    .CTA .btn {
+        font-size: 1rem;
+        padding: 0.7rem 1.2rem;
+    }
+    .header-container h1 {
+        font-size: 1.5rem;
+    }
+    .header-container h5 {
+        font-size: 1rem;
     }
 }
 
@@ -114,13 +132,14 @@ header__socials::after{
         padding: 0 0.5rem;
     }
     .profile img {
-        width: 9rem;
-        height: 12rem;
+        width: 8rem;
+        height: 10rem;
         left: 50%;
         transform: translateX(-50%);
         margin-left: 0;
-        margin-top: 1.5rem;
-        border-width: 6px;
+        margin-top: 1.2rem;
+        border-width: 5px;
+        position: relative;
     }
     .header__socials,
     .Scroll-down {
@@ -129,6 +148,28 @@ header__socials::after{
     .CTA {
         flex-direction: column;
         gap: 0.7rem;
+        align-items: center;
         margin-top: 1rem;
+    }
+    .CTA .btn {
+        width: 100%;
+        max-width: 260px;
+        font-size: 0.98rem;
+        padding: 0.7rem 0;
+        text-align: center;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+    h5 {
+        font-size: 1rem;
+    }
+    .header-container h1 {
+        font-size: 1.3rem;
+        line-height: 1.1;
+    }
+    .header-container h5 {
+        font-size: 1rem;
+        line-height: 1.1;
     }
 }

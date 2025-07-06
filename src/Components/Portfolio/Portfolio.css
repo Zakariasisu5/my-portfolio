@@ -1,9 +1,7 @@
 .portfolio__container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    align-items: center;
-    justify-content: center;
+    gap: 2.5rem;
 }
 
 .portfolio__item{
@@ -11,8 +9,6 @@
     padding: 1.2rem;
     border-radius: 2rem;
     transition: var(--transition);
-    border: 1px solid transparent;
-
 }
 
 .portfolio__item:hover{
@@ -41,6 +37,7 @@
     .portfolio__container {
         grid-template-columns: 1fr 1fr;
         gap: 1.2rem;
+        justify-items: center;
     }
 }
 
@@ -49,16 +46,21 @@
     .portfolio__container {
         grid-template-columns: 1fr;
         gap: 1rem;
+        justify-items: center;
+        margin-left: 1rem;
     }
     .portfolio__item {
         padding: 0.8rem;
         border-radius: 1rem;
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
     }
     .portfolio__item-image {
         border-radius: 0.7rem;
     }
     .portfolio__item h3 {
-        margin: 0.8rem 0 1.2rem;
+        margin: 0.5rem 0 1rem;
         font-size: 1rem;
     }
     .portfolio__item-cta {

@@ -69,47 +69,97 @@
 
 }
 
-/* Media Queries (Medium devices: tablets, 600px - 1024px) */
+/* Tablets (600px - 1024px) */
 @media screen and (max-width: 1024px) {
     .about__container {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
     .about__me {
-        width: 60%;
-        margin: 2rem auto 3rem;
+        width: 70%;
+        margin: 2rem auto 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about__me-image {
+        width: 100%;
+        max-width: 220px;
+        margin: 0 auto 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .about__me-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 1.5rem;
+        display: block;
+        margin: 0 auto;
     }
     .about__cards {
         grid-template-columns: 1fr 1fr;
         gap: 1.2rem;
+        width: 100%;
+        margin-bottom: 1.5rem;
     }
-    .about__content p {
-        margin: 1.2rem 0 1.5rem;
+    .about_card {
+        padding: 1.2rem;
+        border-radius: 1.2rem;
+        text-align: center;
+    }
+    .about__content {
+        text-align: center;
+        margin-top: 1.5rem;
+        font-size: 1rem;
     }
 }
 
-/* Media Queries (Small devices: phones, <600px) */
+/* Phones (<600px) */
 @media screen and (max-width: 600px) {
     .about__container {
         grid-template-columns: 1fr;
         gap: 1rem;
+        align-items: center;
     }
     .about__me {
-        width: 80%;
-        margin: 0 auto 2rem;
+        width: 100%;
+        margin: 0 auto 1.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about__me-image {
+        width: 100%;
+        max-width: 140px;
+        margin: 0 auto 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .about__me-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 1.2rem;
+        display: block;
+        margin: 0 auto;
     }
     .about__cards {
         grid-template-columns: 1fr;
         gap: 1rem;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .about_card {
+        padding: 1rem;
+        border-radius: 1rem;
+        text-align: center;
+        margin-bottom: 0.5rem;
     }
     .about__content {
         text-align: center;
-    }
-    .about__content p {
-        margin: 1rem 0;
-    }
-    .about__me-image img,
-    .about__me-image {
-        border-radius: 8px;
+        margin-top: 1rem;
+        font-size: 0.97rem;
+        width: 100%;
     }
 }

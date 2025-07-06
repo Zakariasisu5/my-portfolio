@@ -59,6 +59,8 @@
     .service__container {
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
+        width: 95%;
+        margin: 0 auto;
     }
     .service {
         height: auto;
@@ -73,6 +75,8 @@
     .service__container {
         grid-template-columns: 1fr;
         gap: 1rem;
+        width: 100%;
+        margin: 0 auto;
     }
     .service__list {
         padding: 1rem;
