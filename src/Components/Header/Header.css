@@ -1,5 +1,5 @@
 header{
-    height: 100vh;
+    height: 70vh;
     padding-top: 4rem;
     overflow: hidden;
     text-align: center;
@@ -75,12 +75,12 @@ header__socials::after{
 /* Media Queries (Medium devices: tablets, 600px - 1024px) */
 @media screen and (max-width: 1024px) {
     header {
-        height: 68vh;
+        height: 30vh;
         margin: 1rem;
         padding-top: 2rem;
     }
     .header__container {
-        height: 100%;
+        height: 30%;
         padding: 0 1rem;
     }
     .profile img {
@@ -124,7 +124,7 @@ header__socials::after{
 /* Media Queries (Small devices: phones, <600px) */
 @media screen and (max-width: 600px) {
     header {
-        height: 100vh;
+        height: 80vh;
         margin: 0.5rem;
         padding-top: 1rem;
     }
