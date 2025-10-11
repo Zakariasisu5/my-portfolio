@@ -47,7 +47,6 @@
         grid-template-columns: 1fr;
         gap: 1rem;
         justify-items: center;
-        margin-left: 1rem;
     }
     .portfolio__item {
         padding: 0.8rem;

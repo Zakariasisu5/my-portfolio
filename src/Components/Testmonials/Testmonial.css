@@ -1,10 +1,8 @@
-.container, .testimonial__container{
-    width: 48%;
-    
-    
-
+.testimonial-wrapper, .testimonial__container{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
 }
-
 .client__avator{
     width: 4rem;
     aspect-ratio: 1/1;

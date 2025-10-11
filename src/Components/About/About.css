@@ -1,7 +1,7 @@
 .about__container{
-   display: grid;
-   grid-template-columns: 30% 50%; 
-   gap: 15%;
+    display: grid;
+    grid-template-columns: minmax(160px, 1fr) minmax(220px, 1.6fr);
+    gap: var(--gutter);
 }
 .about__me{
     width: 100%;

@@ -1,175 +1,82 @@
-header{
+header {
     height: 70vh;
-    padding-top: 4rem;
+    padding-top: 2.5rem;
     overflow: hidden;
     text-align: center;
-    margin-top: 2rem;
-    margin: 2rem;
+    margin: 1rem;
 }
 
-.header__container{
+.header__container {
     text-align: center;
     height: 100%;
     position: relative;
-    
 }
 
-.CTA{
-    margin-top: 2rem;
+.CTA {
+    margin-top: 1.5rem;
     display: flex;
-    gap: 1rem;
+    gap: 0.8rem;
     justify-content: center;
 }
 
-.header__socials{
+.header__socials {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
     gap: 0.5rem;
     position: absolute;
-    left: 0;
-    bottom: 3rem;
-    margin-left: 5rem;
+    left: 1.25rem;
+    bottom: 2.5rem;
 }
 
-header__socials::after{
+.header__socials::after {
     content: '';
     width: 1px;
     height: 2rem;
     background: var(--color-primary);
-
 }
 
-.profile img{
-    background-color: linear-gradient
-    (var(--color-primary) transparent);
-    width: 15rem;
-    height: 20rem;
+.profile img {
+    /* keep a circular/oval profile but responsive */
+    width: 12rem;
+    height: auto;
     position: absolute;
-    margin-left: 3rem ;
-    /*left: 50%;
-    transform: translateX(-50%);*/
-    left: calc(50% - 11rem);
-    margin-top: 3rem;
-    margin-bottom: 2rem;
-    border-radius: 12rem 12rem 0 0;
-    border: 10px solid rgb(139, 216, 240);
-    
-
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 2rem;
+    border-radius: 50% 50% 0 0;
+    border: 8px solid rgba(139,216,240,0.85);
 }
-.Scroll-down{
-    display:flex;
+
+.Scroll-down {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.8rem;
+    gap: 0.6rem;
     position: absolute;
-    right: 0;
-    bottom: 5rem;
+    right: 1.25rem;
+    bottom: 2.5rem;
     transform: rotate(90deg);
-    font-size: 300;
     font-size: 0.9rem;
-    margin-right: 5rem;
 }
 
-/* Media Queries (Medium devices: tablets, 600px - 1024px) */
+/* Medium devices */
 @media screen and (max-width: 1024px) {
-    header {
-        height: 30vh;
-        margin: 1rem;
-        padding-top: 2rem;
-    }
-    .header__container {
-        height: 30%;
-        padding: 0 1rem;
-    }
-    .profile img {
-        width: 12rem;
-        height: 16rem;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-left: 0;
-        margin-top: 2rem;
-        border-width: 8px;
-        position: relative;
-    }
-    .header__socials {
-        left: 0;
-        margin-left: 2rem;
-        bottom: 3rem;
-    }
-    .Scroll-down {
-        right: 0;
-        margin-right: 2rem;
-        bottom: 3rem;
-    }
-    .CTA {
-        flex-direction: row;
-        gap: 1rem;
-        justify-content: center;
-        margin-top: 1.5rem;
-    }
-    .CTA .btn {
-        font-size: 1rem;
-        padding: 0.7rem 1.2rem;
-    }
-    .header-container h1 {
-        font-size: 1.5rem;
-    }
-    .header-container h5 {
-        font-size: 1rem;
-    }
+    header { height: 40vh; margin: 0.8rem; padding-top: 1.5rem; }
+    .header__container { height: auto; padding: 0 1rem; }
+    .profile img { width: 10.5rem; position: relative; transform: translateX(-50%); margin-top: 1.6rem; border-width: 6px; }
+    .header__socials { left: 1rem; bottom: 2rem; }
+    .Scroll-down { right: 1rem; bottom: 2rem; }
+    .CTA { gap: 0.8rem; margin-top: 1rem; }
+    .CTA .btn { font-size: 0.98rem; padding: 0.6rem 1rem; }
 }
 
-/* Media Queries (Small devices: phones, <600px) */
+/* Small devices */
 @media screen and (max-width: 600px) {
-    header {
-        height: 80vh;
-        margin: 0.5rem;
-        padding-top: 1rem;
-    }
-    .header__container {
-        padding: 0 0.5rem;
-    }
-    .profile img {
-        width: 8rem;
-        height: 10rem;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-left: 0;
-        margin-top: 1.2rem;
-        border-width: 5px;
-        position: relative;
-    }
-    .header__socials,
-    .Scroll-down {
-        display: none;
-    }
-    .CTA {
-        flex-direction: column;
-        gap: 0.7rem;
-        align-items: center;
-        margin-top: 1rem;
-    }
-    .CTA .btn {
-        width: 100%;
-        max-width: 260px;
-        font-size: 0.98rem;
-        padding: 0.7rem 0;
-        text-align: center;
-    }
-    h2 {
-        font-size: 1.3rem;
-    }
-    h5 {
-        font-size: 1rem;
-    }
-    .header-container h1 {
-        font-size: 1.3rem;
-        line-height: 1.1;
-    }
-    .header-container h5 {
-        font-size: 1rem;
-        line-height: 1.1;
-    }
+    header { height: auto; margin: 0.5rem; padding-top: 1rem; }
+    .header__container { padding: 0 0.6rem; }
+    .profile img { width: 8rem; margin-top: 1rem; border-width: 5px; }
+    .header__socials, .Scroll-down { display: none; }
+    .CTA { flex-direction: column; gap: 0.6rem; align-items: center; margin-top: 0.8rem; }
+    .CTA .btn { width: 100%; max-width: 260px; padding: 0.6rem 0; }
 }
