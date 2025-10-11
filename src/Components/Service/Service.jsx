@@ -1,8 +1,7 @@
 import React from 'react'
 import './Service.css'
 import { FaFigma } from "react-icons/fa";
-import { MdOutlineWeb } from "react-icons/md";
-import { SiCodementor } from "react-icons/si";
+import { MdOutlineWeb, MdSchool } from "react-icons/md";
 
 const Service = () => {
   return (
@@ -62,7 +61,7 @@ const Service = () => {
           </div>
           <ul className='service__list'>
             <li>
-              <SiCodementor/>
+              <MdSchool/>
               <p>Project Guidance: Guide junior developers 
                 through real-world projects, offering advice on
                 project structure, design patterns, and 
@@ -70,7 +69,7 @@ const Service = () => {
               </p>
             </li>
             <li>
-              <SiCodementor/>
+              <MdSchool/>
               <p>Skill Development Workshops:
                 Organize workshops or one-on-one sessions 
                 to teach specific skills, such as coding 
