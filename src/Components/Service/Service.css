@@ -1,8 +1,9 @@
 .service__container{
-  display: grid;
- 
-  justify-content: space-between;
-  gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.4rem;
+    align-items: start;
+    justify-content: center;
 }
 
 .service{
@@ -11,7 +12,7 @@
     height: fit-content;
     transition: var(--transition);
     border: 1px solid var(--color-bg-variant);
-    width:100%
+    width:100%;
 
 }
 
@@ -24,8 +25,8 @@
 
 .service__head{
     background: var(--color-primary);
-    padding: 2rem;
-    border-radius: 0 0 2rem 2rem;
+    padding: 1.4rem 1.2rem;
+    border-radius: 1.2rem 1.2rem 0 0;
     box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.1);
 }
 
@@ -36,12 +37,13 @@
 }
 
 .service__list{
-    padding: 2rem;
+    padding: 1.6rem;
 }
 .service__list li{
     display: flex;
     gap: 1rem;
-    margin: 0.8rem;
+    margin: 0.8rem 0;
+    align-items: flex-start;
 
 }
 .service__list.icon{
@@ -54,11 +56,23 @@
     font-size: 0.9rem;
 }
 
+/* Icon sizing and color */
+.service__list li svg {
+    font-size: 1.35rem;
+    color: var(--color-primary);
+    min-width: 1.6rem;
+}
+
+/* Card hover subtle lift */
+.service:hover {
+    transform: translateY(-6px);
+}
+
 /* Media Queries (Medium devices: tablets, 600px - 1024px) */
 @media screen and (max-width: 1024px) {
     .service__container {
         grid-template-columns: 1fr 1fr;
-        gap: 2rem;
+        gap: 1.6rem;
         width: 95%;
         margin: 0 auto;
     }

@@ -18,13 +18,13 @@ const Portfolio = () => {
           <div className='portfolio__item-image'>
             <img src= {Img1} alt='dashboard'/>
              </div>
-            <h3>Argon Dashboard</h3>
-            <small>a sleek and feature-rich solution
-               built with React.js, Vite, and Material UI, 
-              offering both dark and light mode themes.</small>
+            <h3>MeetMate</h3>
+            <small>MeetMate – An AI-powered networking platform that helps users connect, 
+              schedule meetings, chat, and manage profiles, 
+              with insights and support powered by Sensay AI.".</small>
             <div className="portfolio__item-cta">
-            <a href='https://github.com/Zakariasisu5/Argon-Admin-Dashboard-' className='btn' target='_blank'>Github Repo</a>
-            <a href='https://argon-admin-dashboard.vercel.app/' className='btn btn-primary' target='_blank'>Live demo</a>
+            <a href='https://github.com/Zakariasisu5/MeetMate' className='btn' target='_blank'>Github Repo</a>
+            <a href='https://meetmate-zeta.vercel.app/' className='btn btn-primary' target='_blank'>Live demo</a>
             </div>
         </article>
         <article className='portfolio__item'>
