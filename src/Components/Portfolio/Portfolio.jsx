@@ -6,6 +6,7 @@ import Img3 from '../../assets/portfolio3.jpg'
 import Img4 from '../../assets/portfolio4.jpg'
 import Img5 from '../../assets/portfolio5.png'
 import Img6 from '../../assets/portfolio6.jpg'
+import Img7 from '../../assets/portfolio7.jpg'
 
 const Portfolio = () => {
   return (
@@ -16,7 +17,7 @@ const Portfolio = () => {
       <div className='container portfolio__container'>
         <article className='portfolio__item'>
           <div className='portfolio__item-image'>
-            <img src= {Img1} alt='dashboard'/>
+            <img src= {Img7} alt='meetmate'/>
              </div>
             <h3>MeetMate</h3>
             <small>MeetMate – An AI-powered networking platform that helps users connect, 
