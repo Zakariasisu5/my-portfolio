@@ -1,9 +1,18 @@
 site-footer {
   margin-top: 8rem;
-  padding: 4.5rem 1.25rem 1.5rem;
-  background: var(--color-bg-variant);
+  padding: 5.5rem 1.25rem 1.5rem;
+  background: linear-gradient(180deg, transparent, var(--color-bg-variant) 18%);
   border-top: 1px solid var(--color-primary-variant);
   color: var(--color-white);
+}
+
+.site-footer::before {
+  content: '';
+  display: block;
+  width: 3rem;
+  height: 2px;
+  margin: 0 auto 4rem;
+  background: var(--color-primary);
 }
 
 .site-footer__inner {
@@ -15,16 +24,37 @@ site-footer {
   padding-bottom: 3.5rem;
 }
 
-.site-footer__brand { max-width: 18rem; }
+.site-footer__brand { max-width: 22rem; }
+.footer__eyebrow {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
 .footer__logo {
   display: inline-block;
   margin-bottom: 0.75rem;
   color: var(--color-white);
-  font-size: 1.35rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 700;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.045em;
 }
-.site-footer__brand p { color: var(--color-light); font-size: 0.9rem; line-height: 1.7; }
+.footer__logo span { color: var(--color-primary); }
+.site-footer__brand p { max-width: 20rem; color: var(--color-light); font-size: 0.92rem; line-height: 1.8; }
+.footer__cta {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 1.5rem;
+  color: var(--color-white);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.footer__cta span { color: var(--color-primary); transition: var(--transition); }
+.footer__cta:hover span { transform: translate(3px, -3px); }
 .site-footer__label {
   margin-bottom: 1rem;
   color: var(--color-primary);
@@ -33,9 +63,10 @@ site-footer {
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
-.permalinks { list-style: none; display: grid; gap: 0.65rem; }
+.permalinks { list-style: none; display: grid; gap: 0.75rem; }
 .permalinks a { color: var(--color-light); font-size: 0.9rem; }
 .permalinks a:hover, .footer__copyright a:hover { color: var(--color-primary); }
+.site-footer nav, .site-footer__connect { padding-top: 0.2rem; }
 .footer__socials { display: flex; gap: 0.7rem; }
 .footer__socials a {
   display: grid;
