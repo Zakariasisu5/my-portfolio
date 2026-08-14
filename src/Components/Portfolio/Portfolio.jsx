@@ -8,145 +8,52 @@ import Img5 from '../../assets/portfolio5.png'
 import Img6 from '../../assets/portfolio6.jpg'
 import Img7 from '../../assets/portfolio7.jpg'
 
-const Portfolio = () => {
-  return (
-    <section id="portfolio">
-      <h5>My Recent work</h5>
-      <h2>Portfolio</h2>
+const projects = [
+  { name: 'MeetMate', type: 'AI / Networking', description: 'An AI-powered networking platform for discovering people, scheduling conversations, and building meaningful professional relationships.', image: Img7, repo: 'https://github.com/Zakariasisu5/MeetMate', live: 'https://meetmate-zeta.vercel.app/' },
+  { name: 'CredLayer', type: 'AI / Web3', description: 'Decentralized reputation and credit scoring infrastructure for a more trusted digital economy.', image: Img1, repo: 'https://github.com/Zakariasisu5/credlayer-trust-hub' },
+  { name: 'MoonCreditFi', type: 'DeFi / Sui Move', description: 'Credit-aware infrastructure designed to make decentralized finance more accessible and intelligent.', image: Img2, repo: 'https://github.com/Zakariasisu5/Mooncreditfi-sui-move' },
+  { name: 'Confnect', type: 'AI / Community', description: 'An intelligent event and networking experience that turns introductions into lasting connections.', image: Img3, repo: 'https://github.com/Zakariasisu5/Confnect' },
+  { name: 'Farm Focus Connect', type: 'Agritech / Platform', description: 'A digital platform connecting farmers with practical services, resources, and opportunities.', image: Img4, repo: 'https://github.com/Zakariasisu5/farmer-focus-connect' },
+  { name: 'Billify Generator', type: 'Product / SaaS', description: 'A focused billing tool for creating polished, professional invoices with less friction.', image: Img5, repo: 'https://github.com/Zakariasisu5/billify-generator-8701' },
+  { name: 'PlusePay', type: 'Fintech / Product', description: 'A simple digital payment experience built around clarity, speed, and accessible transactions.', image: Img6, repo: 'https://github.com/Zakariasisu5/PlusePay' },
+  { name: 'Zerava', type: 'Web3 / Exploration', description: 'A Web3 project exploring useful applications of blockchain technology.', image: Img7, repo: 'https://github.com/Zakariasisu5/Zerava' },
+  { name: 'BizLaunch360', type: 'SaaS / Operations', description: 'A business launch and operations platform for organizing the work behind growing companies.', image: Img1, repo: 'https://github.com/Zakariasisu5/BizLaunch360' },
+  { name: 'Farmers Connect', type: 'Agritech / Community', description: 'A platform helping farmers discover resources, support, and new opportunities.', image: Img2, repo: 'https://github.com/Zakariasisu5/Farmers-Connect' },
+  { name: 'FlockSmart', type: 'AI / Agritech', description: 'AI-driven poultry management and data-led decision-making tools.', image: Img2, repo: 'https://github.com/Zakariasisu5/FlockSmart', live: 'https://flocksmart.vercel.app/' },
+  { name: 'Eco Companion', type: 'Sustainability / Product', description: 'Practical guidance for making more sustainable choices at home and at work.', image: Img3, repo: 'https://github.com/Zakariasisu5/eco-companion', live: 'https://green-living-companion.vercel.app/' },
+  { name: 'UDS GPA Calculator', type: 'Education / Utility', description: 'A clear and efficient tool for students to calculate and track academic performance.', image: Img4, repo: 'https://github.com/Zakariasisu5/uds-gpa-calculator', live: 'https://uds-gpa-calculator.vercel.app/' },
+  { name: 'Web3Thrive', type: 'Web3 / Freelance', description: 'An Africa-focused freelance platform combining Web3 and AI to empower professionals.', image: Img5, repo: 'https://github.com/Zakariasisu5/web3thriveai', live: 'https://web3thriveai.vercel.app/' },
+  { name: 'MicroFarmly', type: 'AI / Food Systems', description: 'An AI-powered hyperlocal farming and food subscription platform for local communities.', image: Img6, repo: 'https://github.com/Zakariasisu5/microfarmly-grow-together', live: 'https://microfarmly-grow-together.vercel.app/' },
+]
 
-      <div className='container portfolio__container'>
-        <article className='portfolio__item'>
-          <div className='portfolio__item-image'>
-            <img src= {Img7} alt='meetmate'/>
-             </div>
-            <h3>MeetMate</h3>
-            <small>MeetMate – An AI-powered networking platform that helps users connect, 
-              schedule meetings, chat, and manage profiles, 
-              with insights and support powered by Sensay AI.".</small>
-            <div className="portfolio__item-cta">
-            <a href='https://github.com/Zakariasisu5/MeetMate' className='btn' target='_blank'>Github Repo</a>
-            <a href='https://meetmate-zeta.vercel.app/' className='btn btn-primary' target='_blank'>Live demo</a>
-            </div>
-        </article>
-        <article className='portfolio__item'>
-          <div className='portfolio__item-image'>
-            <img src= {Img2} alt='dashboard'/>
-             </div>
-            <h3>FlockSmart</h3>
-            <small>FlockSmart is an innovative,
-            AI-driven poultry management solution and 
-            data-driven decision-making tools.</small>
-            <div className="portfolio__item-cta">
-            <a href='https://github.com/Zakariasisu5/FlockSmart' className='btn' target='_blank'>Github Repo</a>
-            <a href='https://flocksmart.vercel.app/' className='btn btn-primary' target='_blank'>Live demo</a>
-            </div>
-        </article>
-        <article className='portfolio__item'>
-          <div className='portfolio__item-image'>
-            <img src= {Img3} alt='dashboard'/>
-             </div>
-            <h3>Eco Companion</h3>
-            <small>Practical advice on how to reduce your environmental impact through energy conservation, waste reduction, and
-               eco-friendly practices at home and work.</small>
-            <div className="portfolio__item-cta">
-            <a href='https://github.com/Zakariasisu5/eco-companion' className='btn' target='_blank'>Github Repo</a>
-            <a href='https://green-living-companion.vercel.app/' className='btn btn-primary' target='_blank'>Live demo</a>
-            </div>
-        </article>
-        <article className='portfolio__item'>
-          <div className='portfolio__item-image'>
-            <img src= {Img4} alt='dashboard'/>
-             </div>
-            <h3>UDS GPA Calculator</h3>
-            <small>The UDS GPA Calculator is a sleek and efficient web application designed to help University for Development Studies
-              (UDS) students accurately compute and track their GPA</small>
-            <div className="portfolio__item-cta">
-            <a href='https://github.com/Zakariasisu5/uds-gpa-calculator' className='btn' target='_blank'>Github Repo</a>
-            <a href='https://uds-gpa-calculator.vercel.app/' className='btn btn-primary' target='_blank'>Live demo</a>
-            </div>
-        </article>
-        <article className='portfolio__item'>
-          <div className='portfolio__item-image'>
-            <img src= {Img5} alt='dashboard'/>
-             </div>
-            <h3>Web3Thrive</h3>
-            <small>a cutting-edge freelance platform tailored for Africa-based freelancers, combining Web3 technologies 
-              and AI to empower professionals of all skill levels.</small>
-            <div className="portfolio__item-cta">
-            <a href='https://github.com/Zakariasisu5/web3thriveai' className='btn' target='_blank'>Github Repo</a>
-            <a href='https://web3thriveai.vercel.app/' className='btn btn-primary' target='_blank'>Live demo</a>
-            </div>
-        </article>
-        <article className='portfolio__item'>
-          <div className='portfolio__item-image'>
-            <img src= {Img6} alt='dashboard'/>
-             </div>
-            <h3>MicroFarmly</h3>
-            <small>MicroFarmly is an AI-powered, hyperlocal farming and food subscription platform.
-              It enables cafes, coworking spaces, </small>
-            <div className="portfolio__item-cta">
-            <a href='https://github.com/Zakariasisu5/microfarmly-grow-together' className='btn' target='_blank'>Github Repo</a>
-            <a href='https://microfarmly-grow-together.vercel.app/' className='btn btn-primary' target='_blank'>Live demo</a>
-            </div>
-        </article>
-        <article className='portfolio__item'>
-          <div className='portfolio__item-image'><img src={Img1} alt='CredLayer reputation platform' /></div>
-          <h3>CredLayer</h3>
-          <small>AI-powered decentralized reputation and credit scoring for a more trusted digital economy.</small>
-          <div className='portfolio__item-cta'><a href='https://github.com/Zakariasisu5/credlayer-trust-hub' className='btn' target='_blank' rel='noreferrer'>Github Repo</a></div>
-        </article>
-        <article className='portfolio__item'>
-          <div className='portfolio__item-image'><img src={Img2} alt='MoonCreditFi DeFi infrastructure' /></div>
-          <h3>MoonCreditFi</h3>
-          <small>Credit-aware DeFi infrastructure built to bring smarter financial access to decentralized finance.</small>
-          <div className='portfolio__item-cta'><a href='https://github.com/Zakariasisu5/Mooncreditfi-sui-move' className='btn' target='_blank' rel='noreferrer'>Github Repo</a></div>
-        </article>
-        <article className='portfolio__item'>
-          <div className='portfolio__item-image'><img src={Img3} alt='Confnect networking platform' /></div>
-          <h3>Confnect</h3>
-          <small>AI-powered networking and event connection platform for meaningful professional relationships.</small>
-          <div className='portfolio__item-cta'><a href='https://github.com/Zakariasisu5/Confnect' className='btn' target='_blank' rel='noreferrer'>Github Repo</a></div>
-        </article>
-        <article className='portfolio__item'>
-          <div className='portfolio__item-image'><img src={Img4} alt='Farm Focus Connect platform' /></div>
-          <h3>Farm Focus Connect</h3>
-          <small>A digital platform connecting farmers with useful services, tools, and opportunities.</small>
-          <div className='portfolio__item-cta'><a href='https://github.com/Zakariasisu5/farmer-focus-connect' className='btn' target='_blank' rel='noreferrer'>Github Repo</a></div>
-        </article>
-        <article className='portfolio__item'>
-          <div className='portfolio__item-image'><img src={Img5} alt='Billify invoice generator' /></div>
-          <h3>Billify Generator</h3>
-          <small>A simple web app for creating polished, professional invoices and bills.</small>
-          <div className='portfolio__item-cta'><a href='https://github.com/Zakariasisu5/billify-generator-8701' className='btn' target='_blank' rel='noreferrer'>Github Repo</a></div>
-        </article>
-        <article className='portfolio__item'>
-          <div className='portfolio__item-image'><img src={Img6} alt='PlusePay payment solution' /></div>
-          <h3>PlusePay</h3>
-          <small>A digital payment solution focused on simple, accessible transactions.</small>
-          <div className='portfolio__item-cta'><a href='https://github.com/Zakariasisu5/PlusePay' className='btn' target='_blank' rel='noreferrer'>Github Repo</a></div>
-        </article>
-        <article className='portfolio__item'>
-          <div className='portfolio__item-image'><img src={Img7} alt='Zerava Web3 project' /></div>
-          <h3>Zerava</h3>
-          <small>A Web3 project exploring practical blockchain-powered applications.</small>
-          <div className='portfolio__item-cta'><a href='https://github.com/Zakariasisu5/Zerava' className='btn' target='_blank' rel='noreferrer'>Github Repo</a></div>
-        </article>
-        <article className='portfolio__item'>
-          <div className='portfolio__item-image'><img src={Img1} alt='BizLaunch360 business platform' /></div>
-          <h3>BizLaunch360</h3>
-          <small>A SaaS platform helping businesses launch, organize, and manage their operations.</small>
-          <div className='portfolio__item-cta'><a href='https://github.com/Zakariasisu5/BizLaunch360' className='btn' target='_blank' rel='noreferrer'>Github Repo</a></div>
-        </article>
-        <article className='portfolio__item'>
-          <div className='portfolio__item-image'><img src={Img2} alt='Farmers Connect platform' /></div>
-          <h3>Farmers Connect</h3>
-          <small>A digital platform connecting farmers with resources, opportunities, and support.</small>
-          <div className='portfolio__item-cta'><a href='https://github.com/Zakariasisu5/Farmers-Connect' className='btn' target='_blank' rel='noreferrer'>Github Repo</a></div>
-        </article>
-            
+const ProjectCard = ({ project, featured = false }) => (
+  <article className={`portfolio__item ${featured ? 'portfolio__item--featured' : ''}`}>
+    <div className="portfolio__item-image"><img src={project.image} alt={`${project.name} project preview`} /></div>
+    <div className="portfolio__item-content">
+      <div className="portfolio__item-meta"><span>{project.type}</span><span className="portfolio__item-index">{String(projects.indexOf(project) + 1).padStart(2, '0')}</span></div>
+      <h3>{project.name}</h3>
+      <p>{project.description}</p>
+      <div className="portfolio__item-cta">
+        <a href={project.repo} className="btn" target="_blank" rel="noreferrer">View repository <span aria-hidden="true">↗</span></a>
+        {project.live && <a href={project.live} className="btn btn-primary" target="_blank" rel="noreferrer">Live product <span aria-hidden="true">↗</span></a>}
       </div>
-    </section>
-  )
-}
+    </div>
+  </article>
+)
+
+const Portfolio = () => (
+  <section id="portfolio" className="portfolio-section">
+    <div className="portfolio__intro container">
+      <div>
+        <p className="portfolio__eyebrow">Selected work / 2021—2026</p>
+        <h2>Products built with <em>purpose.</em></h2>
+      </div>
+      <p className="portfolio__summary">A selection of digital products, platforms, and experiments across AI, fintech, Web3, and agritech.</p>
+    </div>
+    <div className="container portfolio__container">
+      {projects.map((project, index) => <ProjectCard key={project.name} project={project} featured={index === 0} />)}
+    </div>
+  </section>
+)
 
 export default Portfolio

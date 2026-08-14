@@ -7,10 +7,10 @@
 
 :root {
   /* Color palette */
-  --color-bg: #1f1f3b;
-  --color-bg-variant: #2c2c6c;
-  --color-primary: #4db5ff;
-  --color-primary-variant: rgba(77, 181, 255, 0.6);
+  --color-bg: #15151d;
+  --color-bg-variant: #222238;
+  --color-primary: #d6b36a;
+  --color-primary-variant: rgba(214, 179, 106, 0.45);
   --color-white: #fff;
   --color-light: rgba(255, 255, 255, 0.6);
 
