@@ -15,7 +15,6 @@ const Footer = () => {
           <a className="footer__cta" href="mailto:zakaria.sisu@example.com">Start a conversation <span aria-hidden="true">↗</span></a>
         </div>
         <nav aria-label="Footer navigation">
-          <p className="site-footer__label">Explore</p>
           <ul className="permalinks">
             <li><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
