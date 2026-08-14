@@ -1,107 +1,75 @@
-footer{
-    background: var(--color-primary);
-    padding: 3rem;
-    text-align: center;
-    font-size: 0.9rem;
-    margin-top: 7rem;
+site-footer {
+  margin-top: 8rem;
+  padding: 4.5rem 1.25rem 1.5rem;
+  background: var(--color-bg-variant);
+  border-top: 1px solid var(--color-primary-variant);
+  color: var(--color-white);
 }
 
-footer a{
-    color: var(--color-bg);
+.site-footer__inner {
+  width: min(100%, var(--container-max-width));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 3.5rem;
 }
 
-.footer__logo{
-   font-size: 2rem;
-   font-weight: 500;
-   margin-bottom: 2rem;
-   display: inline-block; 
+.site-footer__brand { max-width: 18rem; }
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  color: var(--color-white);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+.site-footer__brand p { color: var(--color-light); font-size: 0.9rem; line-height: 1.7; }
+.site-footer__label {
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.permalinks { list-style: none; display: grid; gap: 0.65rem; }
+.permalinks a { color: var(--color-light); font-size: 0.9rem; }
+.permalinks a:hover, .footer__copyright a:hover { color: var(--color-primary); }
+.footer__socials { display: flex; gap: 0.7rem; }
+.footer__socials a {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--color-primary-variant);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--color-light);
+  transition: var(--transition);
+}
+.footer__socials a:hover { background: var(--color-primary); color: var(--color-bg); border-color: var(--color-primary); transform: translateY(-2px); }
+.footer__copyright {
+  width: min(100%, var(--container-max-width));
+  margin: 0 auto;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-primary-variant);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--color-light);
+  font-size: 0.78rem;
+}
+.footer__copyright a { color: var(--color-light); }
+
+@media screen and (max-width: 700px) {
+  .site-footer { margin-top: 5rem; padding: 3.5rem 1rem 1.25rem; }
+  .site-footer__inner { grid-template-columns: 1fr 1fr; gap: 2.5rem 1.5rem; }
+  .site-footer__brand { grid-column: 1 / -1; }
+  .footer__copyright { align-items: flex-start; flex-direction: column; }
 }
 
-.permalinks{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    margin: 0 auto 3rem;
-}
-
-.footer__socials{
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 4rem;
-
-}
-
-.footer__socials a{
-    background: var(--color-bg);
-    color: var(--color-white);
-    padding: 0.8rem;
-    border-radius: 0.7rem;
-    display: flex;
-    border: 1px solid transparent;
-}
-
-.footer__socials a:hover{
-    background: transparent;
-    color: var(--color-bg);
-    border: var(--color-bg);
-
-}
-
-.footer__copyright{
-    margin-bottom: 4rem;
-    color: var(--color-bg);
-}
-
-/* Media Queries (Medium devices: tablets, 600px - 1024px) */
-@media screen and (max-width: 1024px) {
-    .permalinks {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-        margin-bottom: 2rem;
-    }
-    .permalinks a {
-        font-size: 1.1rem;
-        padding: 0.7rem 0;
-        display: block;
-        width: 100%;
-        text-align: center;
-        border-radius: 0.5rem;
-        transition: background 0.2s;
-    }
-    .permalinks a:hover {
-        background: var(--color-bg-variant);
-    }
-    .footer__logo {
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
-    }
-}
-
-/* Media Queries (Small devices: phones, <600px) */
-@media screen and (max-width: 600px) {
-    .permalinks {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        margin-bottom: 1.5rem;
-    }
-    .permalinks a {
-        font-size: 1rem;
-        padding: 0.9rem 0;
-        display: block;
-        width: 100%;
-        text-align: center;
-        border-radius: 0.5rem;
-        transition: background 0.2s;
-    }
-    .permalinks a:hover {
-        background: var(--color-bg-variant);
-    }
-    .footer__logo {
-        font-size: 1.1rem;
-        margin-bottom: 1rem;
-    }
+@media screen and (max-width: 420px) {
+  .site-footer__inner { grid-template-columns: 1fr; }
+  .site-footer__brand { grid-column: auto; }
 }
