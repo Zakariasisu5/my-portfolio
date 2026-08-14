@@ -9,8 +9,10 @@ const Footer = () => {
     <footer className="site-footer">
       <div className="site-footer__inner">
         <div className="site-footer__brand">
-          <a href="#" className="footer__logo">Zakaria Sisu</a>
-          <p>Building thoughtful digital products with clarity and purpose.</p>
+          <span className="footer__eyebrow">Independent product engineer</span>
+          <a href="#" className="footer__logo">Zakaria Sisu<span>.</span></a>
+          <p>Building thoughtful digital products with clarity, craft, and purpose.</p>
+          <a className="footer__cta" href="mailto:zakaria.sisu@example.com">Start a conversation <span aria-hidden="true">↗</span></a>
         </div>
         <nav aria-label="Footer navigation">
           <p className="site-footer__label">Explore</p>
